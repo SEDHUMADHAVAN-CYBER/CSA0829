@@ -1,0 +1,9 @@
+#Sum of negative numbers until -1
+total = 0
+while True:
+    num = int(input("Enter number: "))
+    if num == -1:
+        break
+    if num < 0:
+        total += num
+print("Sum of negative numbers:", total)
