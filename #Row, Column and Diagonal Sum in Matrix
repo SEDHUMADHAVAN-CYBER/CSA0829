@@ -1,0 +1,15 @@
+#Row, Column and Diagonal Sum in Matrix
+matrix = [[1,2,3], [4,5,6], [7,8,9]]
+n = len(matrix)
+
+for i in range(n):
+print(f"Sum of row {i}:", sum(matrix[i]))
+print(f"Sum of column {i}:", sum(row[i] for row in matrix))
+
+primary_sum = sum(matrix[i][i] 
+for i in range(n)):
+secondary_sum = sum(matrix[i][n-i-1]
+for i in range(n)) 
+print("Primary diagonal sum:", primary_sum) 
+
+print("Secondary diagonal sum:", secondary_sum)
