@@ -1,0 +1,5 @@
+#Perfect Number Check
+num = int(input("Enter a number: "))
+div_sum = sum(i for i in range(1, num) if num % i == 0)
+print("Perfect Number" if div_sum == num else "Not a Perfect Number")
+

@@ -1,0 +1,7 @@
+C
+import statistics as stats
+
+data = list(map(int, input("Enter numbers separated by space: ").split()))
+print("Mean:", stats.mean(data))
+print("Median:", stats.median(data)) 
+print("Mode:", stats.mode(data))
