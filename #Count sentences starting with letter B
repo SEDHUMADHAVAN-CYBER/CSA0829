@@ -1,0 +1,6 @@
+#Count sentences starting with letter B
+text = input("Enter a paragraph: ")
+sentences = text.split('.')
+count = sum(1 for sentence in sentences if sentence.strip().startswith('B'))
+ 
+print("Sentences starting with 'B':", count)
