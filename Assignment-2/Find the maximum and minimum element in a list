@@ -1,0 +1,11 @@
+
+def find_max_min(lst):
+    if not lst:
+        return "List is empty"
+    return max(lst), min(lst)
+
+# Example usage
+numbers = [3, 7, 2, 9, 4, 1]
+maximum, minimum = find_max_min(numbers)
+print("Maximum element:", maximum)
+print("Minimum element:", minimum)
