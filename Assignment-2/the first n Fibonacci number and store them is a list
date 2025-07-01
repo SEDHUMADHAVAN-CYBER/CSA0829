@@ -1,0 +1,12 @@
+def fibonacci_series(n):
+    fib_list = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib_list.append(a)
+        a, b = b, a + b
+    return fib_list
+
+# Example usage
+n = 10
+fib_numbers = fibonacci_series(n)
+print(f"The first {n} Fibonacci numbers are:", fib_numbers)
