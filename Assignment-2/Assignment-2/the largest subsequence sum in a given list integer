@@ -1,0 +1,11 @@
+def max_subsequence_sum(nums):
+    max_sum = current_sum = nums[0]
+    for num in nums[1:]:
+        current_sum = max(num, current_sum + num)  # Extend or restart
+        max_sum = max(max_sum, current_sum)        # Track max so far
+    return max_sum
+
+# Example usage
+numbers = [5, -2, 3, 4, -1, 2, -6, 3]
+result = max_subsequence_sum(numbers)
+print("Largest subsequence sum is:", result)
