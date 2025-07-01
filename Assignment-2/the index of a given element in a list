@@ -1,0 +1,15 @@
+def find_index(lst, element):
+    try:
+        return lst.index(element)
+    except ValueError:
+        return -1  # Element not found
+
+# Example usage
+my_list = [10, 20, 30, 40, 50]
+element_to_find = 30
+
+index = find_index(my_list, element_to_find)
+if index != -1:
+    print(f"Element {element_to_find} found at index {index}")
+else:
+    print(f"Element {element_to_find} not found in the list")
