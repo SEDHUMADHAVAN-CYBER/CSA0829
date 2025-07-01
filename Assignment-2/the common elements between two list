@@ -1,0 +1,14 @@
+def common_elements_with_duplicates(list1, list2):
+    common = []
+    temp_list2 = list2.copy()  # Avoid modifying the original list2
+    for item in list1:
+        if item in temp_list2:
+            common.append(item)
+            temp_list2.remove(item)
+    return common
+
+# Example usage
+list1 = [1, 2, 2, 3, 4]
+list2 = [2, 2, 3, 5]
+result = common_elements_with_duplicates(list1, list2)
+print("Common elements (with duplicates):", result)
