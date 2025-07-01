@@ -1,0 +1,11 @@
+def second_largest_number(lst):
+    unique_nums = list(set(lst))  # Remove duplicates
+    if len(unique_nums) < 2:
+        return None  # No 2nd largest if less than 2 unique numbers
+    unique_nums.sort(reverse=True)
+    return unique_nums[1]
+
+# Example usage
+numbers = [10, 20, 30, 40, 30, 20]
+second_largest = second_largest_number(numbers)
+print("2nd largest number is:", second_largest)
