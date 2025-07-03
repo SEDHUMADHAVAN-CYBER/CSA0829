@@ -1,0 +1,26 @@
+# Sample list
+arr = [1, 3, 2, 1, 4, 1, 3, 2, 2, 2, 5]
+
+# Dictionary to store frequency
+freq = {}
+
+# Count frequency of each element
+for num in arr:
+    if num in freq:
+        freq[num] += 1
+    else:
+        freq[num] = 1
+
+# Display frequency of each element
+print("Frequencies of elements:")
+for key, value in freq.items():
+    print(f"{key} => {value}")
+
+# Find the highest frequency
+max_freq = max(freq.values())
+
+# Find the element(s) with the highest frequency
+print("\nElement(s) with the highest frequency:")
+for key, value in freq.items():
+    if value == max_freq:
+        print(f"{key} occurred {value} times")

@@ -1,0 +1,14 @@
+# Input
+m = int(input("Enter number of vehicles John has: "))
+n = int(input("Enter number of children: "))
+
+# Vehicles Peter gets
+peter_vehicles = m % n
+
+print("Peter will get", peter_vehicles, "vehicle(s).")
+
+# Check if even
+if peter_vehicles % 2 == 0:
+    print("Peter is luckier (even number of vehicles)!")
+else:
+    print("Peter is not luckier (odd number of vehicles).")
