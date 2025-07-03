@@ -1,0 +1,15 @@
+def intersection_of_arrays(arr1, arr2):
+    # Convert to sets to remove duplicates and find intersection
+    set1 = set(arr1)
+    set2 = set(arr2)
+
+    intersection = list(set1 & set2)
+    return intersection
+
+# Example usage
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [3, 4, 5, 6, 7]
+
+result = intersection_of_arrays(arr1, arr2)
+
+print("Intersection of arrays:", result)

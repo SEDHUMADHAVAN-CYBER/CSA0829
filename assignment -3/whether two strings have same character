@@ -1,0 +1,19 @@
+def count_matching_indices(s1, s2):
+    length = min(len(s1), len(s2))
+    matches = 0
+
+    for i in range(length):
+        if s1[i] == s2[i]:
+            matches += 1
+
+    return matches
+
+# Sample Input
+s1 = "what"
+s2 = "watch"
+
+# Compute matches
+result = count_matching_indices(s1, s2)
+
+# Output
+print("Number of matching characters at same index:", result)

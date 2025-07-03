@@ -1,0 +1,24 @@
+def count_vowels_consonants(text):
+    vowels_set = set("aeiouAEIOU")
+    vowels = consonants = 0
+
+    for ch in text:
+        if ch.isalpha():                 # consider letters only
+            if ch in vowels_set:
+                vowels += 1
+            else:
+                consonants += 1
+
+    print(f"Number of vowels = {vowels}")
+    print(f"Number of consonants = {consonants}")
+
+    if vowels > consonants:
+        print("Vowels are more than consonants.")
+    elif consonants > vowels:
+        print("Consonants are more than vowels.")
+    else:
+        print("Vowels and consonants are equal.")
+
+# ── Sample run ───────────────────────────────────────────────
+statement = "Saveetha School of Engineering"
+count_vowels_consonants(statement)

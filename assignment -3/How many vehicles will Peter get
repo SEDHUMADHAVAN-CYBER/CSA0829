@@ -1,0 +1,21 @@
+def vehicles_for_peter(m, n):
+    if n == 0:
+        print("Cannot divide by zero children.")
+        return
+
+    vehicles_per_child = m // n
+    remaining_for_peter = m % n
+
+    print(f"Each child gets: {vehicles_per_child} vehicles")
+    print(f"Peter gets: {remaining_for_peter} remaining vehicles")
+
+    if remaining_for_peter % 2 == 0:
+        print("Peter is luckier (even number of vehicles)!")
+    else:
+        print("Peter is not lucky (odd number of vehicles).")
+
+# Example usage
+m = 17  # total vehicles
+n = 5   # children
+
+vehicles_for_peter(m, n)

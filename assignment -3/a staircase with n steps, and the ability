@@ -1,0 +1,16 @@
+def climb_stairs(n):
+    if n == 0 or n == 1:
+        return 1
+
+    dp = [0] * (n + 1)
+    dp[0] = 1  # 1 way to stay at ground
+    dp[1] = 1  # 1 way to climb 1 step
+
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]  # Sum of ways from previous 1 and 2 steps
+
+    return dp[n]
+
+# Example usage
+steps = 5
+print(f"Number of distinct ways to climb {steps} steps:", climb_stairs(steps))

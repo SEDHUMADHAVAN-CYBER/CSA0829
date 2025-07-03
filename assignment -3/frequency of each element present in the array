@@ -1,0 +1,22 @@
+def find_frequencies_and_max(arr):
+    freq = {}
+
+    # Count frequency of each element
+    for item in arr:
+        freq[item] = freq.get(item, 0) + 1
+
+    # Display all frequencies
+    print("Frequencies of elements:")
+    for key, value in freq.items():
+        print(f"{key}: {value}")
+
+    # Find element with highest frequency
+    max_element = max(freq, key=freq.get)
+    max_freq = freq[max_element]
+
+    print(f"\nElement with highest frequency: {max_element}")
+    print(f"Highest frequency: {max_freq}")
+
+# Example usage
+arr = [1, 3, 2, 3, 4, 1, 3, 2, 1, 1]
+find_frequencies_and_max(arr)
